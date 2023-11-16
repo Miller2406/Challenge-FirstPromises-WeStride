@@ -1,32 +1,49 @@
-
-const OddEvenPromise = (input) => {
-    return new Promise((resolve, reject) => {
-        if (typeof input === 'string') { // is a string 
-            console.log('string')
-            reject('error')
-        } else {
-            // not a string
-            if (input % 2 !== 0) { // odd
-                setTimeout(() => {
-                    console.log('number')
-                    resolve('odd')
-                }, 1000)
-            } else { // even
-                setTimeout(() => {
-                    console.log('number')
-                    resolve('even')
-                }, 2000);
-            }
-        }
-    })
+const OddEvenPromiseAsync = async (data) => {
+    if (typeof data === 'string') throw 'error'
+    if (data % 2 !== 0) return 'odd'
+    if (data % 2 == 0) return 'even'
+    throw 'error'
 }
 
-OddEvenPromise('1')
+OddEvenPromiseAsync(2)
     .then((data) => console.log(data))
-    .catch((err) => console.log(err))
-OddEvenPromise(1)
+    .catch((error) => console.log(error))
+OddEvenPromiseAsync(1)
     .then((data) => console.log(data))
-    .catch((err) => console.log(err))
-OddEvenPromise(10)
+    .catch((error) => console.log(error))
+OddEvenPromiseAsync('12')
     .then((data) => console.log(data))
-    .catch((err) => console.log(err))
+    .catch((error) => console.log(error))
+
+//First Promise Function ======================================
+// const OddEvenPromise = (input) => {
+//     return new Promise((resolve, reject) => {
+//         if (typeof input === 'string') { // is a string
+//             console.log('string')
+//             reject('error')
+//         } else {
+//             // not a string
+//             if (input % 2 !== 0) { // odd
+//                 setTimeout(() => {
+//                     console.log('number')
+//                     resolve('odd')
+//                 }, 1000)
+//             } else { // even
+//                 setTimeout(() => {
+//                     console.log('number')
+//                     resolve('even')
+//                 }, 2000);
+//             }
+//         }
+//     })
+// }
+
+// OddEvenPromise('1')
+//     .then((data) => console.log(data))
+//     .catch((err) => console.log(err))
+// OddEvenPromise(1)
+//     .then((data) => console.log(data))
+//     .catch((err) => console.log(err))
+// OddEvenPromise(10)
+//     .then((data) => console.log(data))
+//     .catch((err) => console.log(err))
