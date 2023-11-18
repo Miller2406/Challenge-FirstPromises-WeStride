@@ -10,6 +10,12 @@ body {
     background-color: black;
 }
 
+/* ID */
+#formGet input {
+    margin: 20px 0;
+}
+
+/* CLASSES */
 .container {
     margin: 30px 5%;
 }
@@ -34,12 +40,13 @@ body {
 
 }
 
-p {
-    margin: 2px 0px 7px;
-}
-
 .bgbk {
     background-color: rgb(72, 72, 72);
+}
+
+/* ELEMENTS */
+p {
+    margin: 2px 0px 7px;
 }
 
 ul {
@@ -48,7 +55,6 @@ ul {
 }
 
 li {
-    /* border: 1px solid red; */
     overflow-wrap: break-word;
 }
 
@@ -99,12 +105,7 @@ button:hover {
     transform: translateX(5px);
 }
 
-#formGet {}
-
-#formGet input {
-    margin: 20px 0;
-}
-
+/* RESPONSIVE */
 @media screen and (width <=1024px) {
     .grid {
         grid-template-columns: 1fr;
