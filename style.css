@@ -1,0 +1,110 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    margin: 30px 5%;
+    color: white;
+    background-color: black;
+}
+
+.container {
+    margin: 30px 5%;
+}
+
+.grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 10px;
+    margin: 0 auto;
+}
+
+
+.bglightblue {
+    background-color: rgb(0, 0, 0);
+    margin: 10px 5px;
+    padding: 10px 20px 5%;
+    height: 90%;
+}
+
+.bglightblue:hover {
+    background-color: rgb(34, 34, 34);
+
+}
+
+
+
+.bgbk {
+    background-color: rgb(72, 72, 72);
+}
+
+ul {
+    padding-left: 10px;
+    list-style: none;
+}
+
+li {
+    /* border: 1px solid red; */
+    overflow-wrap: break-word;
+}
+
+a {
+    text-decoration: none;
+    color: white;
+}
+
+a:hover {
+    color: brown;
+}
+
+h2 {
+    font-size: 3rem;
+    text-align: center;
+    margin: 3vh 0;
+}
+
+h3 {
+    font-size: 1.5rem;
+}
+
+.flex {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+input {
+    width: 200px;
+    height: 25px;
+    border-radius: 5px;
+    padding: 0 5px;
+}
+
+button {
+    width: 36px;
+    height: 26px;
+    border-radius: 20%;
+    padding: 1px;
+}
+
+button:hover {
+    scale: 1.5;
+    transition: all .2s ease;
+    font-weight: 600;
+    color: brown;
+    transform: translateX(5px);
+}
+
+#formGet {}
+
+#formGet input {
+    margin: 20px 0;
+}
+
+@media screen and (width <=1024px) {
+    .grid {
+        grid-template-columns: 1fr;
+    }
+}
